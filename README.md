@@ -60,7 +60,7 @@ The main goal of this project is to classify paraffin wax samples into five cate
 
    <pre markdown="1"> ```bash
 git clone https://github.com/Marta-Barea/hsgcms-paraffinwax-odor-ml
-cd machine-learning_HSGCMS_ParaffinWax_Odor </pre>
+cd hsgcms-paraffinwax-odor-ml </pre>
 
 ### Running the Shiny Application
 1. Place `app.R`, `svm.rds`, `svr.rds`and `test_data.xlsx` in the same folder.
