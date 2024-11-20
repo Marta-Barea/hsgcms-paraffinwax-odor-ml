@@ -62,8 +62,12 @@ scores_pca <- cbind.data.frame(predict(pw_pca),
 m_labels <- as.matrix(pw_data[,-1])
 rownames(m_labels) <- pw_data$ID
 
-cols <- c("#000080","#0F52BA","#4169E1","#87CEEB","#4682B4")
+cols <- c("#87CEEB","#4682B4","#4169E1","#0F52BA","#000080")
 cols
+
+order <- c("None", "Slight", "Moderate", "Strong", "Very Strong")
+
+scores_pca$group <- factor(scores_pca$group, levels = order)
 
 scatter_plot <- ggplot(scores_pca, aes(x = PC1, y = PC2, col = group, label = rownames(m_labels))) +
   geom_hline(yintercept = 0, lty = "dashed", alpha = 0.5) +
@@ -99,9 +103,9 @@ loadings_plot <- ggplot(ld, aes(x = rn, y = value, fill = variable)) +
         legend.text = element_text(size = 10),
         axis.text = element_text(size = 15, hjust = 1, angle = 90),
         axis.title = element_text(size = 15, face = "bold")) +
-  labs(x = "Wavelength (nm)", y = "Loadings PCs", title = "") +
+  labs(x = "m/z", y = "Loadings PCs", title = "") +
   scale_x_discrete(limits = loadings$rn,
-                   breaks = loadings$rn[seq(1, length(loadings$rn), by = 5)]) +
+                   breaks = loadings$rn[seq(1, length(loadings$rn), by = 7)]) +
   scale_fill_manual(values = c("#4169E1", "#87CEEB")) 
 
 loadings_plot
