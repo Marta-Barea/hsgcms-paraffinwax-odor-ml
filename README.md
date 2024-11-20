@@ -66,7 +66,8 @@ cd machine-learning_HSGCMS_ParaffinWax_Odor </pre>
 1. Place `app.R`, `svm.rds`, `svr.rds`and `test_data.xlsx` in the same folder.
 2. In your R console, run: 
    
-   <pre markdown="1"> ```R shiny::runApp("app.R") </pre>
+   <pre markdown="1"> ```R 
+      shiny::runApp("app.R") </pre>
 
 3. Use the web interface to:
 - 📁 **Upload** `.csv` or `.xlsx` data files.
