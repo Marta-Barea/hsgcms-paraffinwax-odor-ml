@@ -57,17 +57,18 @@ The main goal of this project is to classify paraffin wax samples into five cate
 
 ### Clone the Repository
 
-
-   <pre markdown="1"> ```bash
+```bash
 git clone https://github.com/Marta-Barea/hsgcms-paraffinwax-odor-ml
-cd hsgcms-paraffinwax-odor-ml </pre>
+cd hsgcms-paraffinwax-odor-ml
+```
 
 ### Running the Shiny Application
 1. Place `app.R`, `svm.rds`, `svr.rds`and `test_data.xlsx` in the same folder.
-2. In your R console, run: 
+2. In your R console, run:
    
-   <pre markdown="1"> ```R 
-      shiny::runApp("app.R") </pre>
+```R 
+shiny::runApp("app.R")
+```
 
 3. Use the web interface to:
 - 📁 **Upload** `.csv` or `.xlsx` data files.
@@ -78,7 +79,6 @@ cd hsgcms-paraffinwax-odor-ml </pre>
 
 ### 📂 **Example Dataset**
 A sample dataset (`test_data.xlsx`) is included for demonstration purposes. It contains Vis-NIR spectral readings and hydroprocessing grades for various wax samples.
-
 
 ---
 
